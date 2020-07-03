@@ -69,7 +69,8 @@ function init() {
 
     // Create bar chart
     var data = [trace1];
-    Plotly.newPlot('bar', data, layout1);
+    var config = {responsive:true}
+    Plotly.newPlot('bar', data, layout1,config);
 
     //-------------------------------------------------
     // Create a bubble chart that displays each sample.
@@ -107,10 +108,11 @@ function init() {
                 pad: 4
               }
     };
+    var config = {responsive:true}
 
     // Create the bubble chart
     var data2 = [trace2];
-    Plotly.newPlot('bubble',data2,layout2);
+    Plotly.newPlot('bubble',data2,layout2,config);
 
 
     //--------------------------------------------------------
@@ -189,8 +191,8 @@ function init() {
           }
         ],
         title: "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week",
-        height: 500,
-        width: 500,
+        // height: 500,
+        // width: 500,
         xaxis: {
           zeroline: false,
           showticklabels: false,
@@ -204,8 +206,9 @@ function init() {
           range: [-1, 1]
         }
       };
+      var config = {responsive:true}
       // Plot the gauge chart
-      Plotly.newPlot('gauge', dataGauge,layoutGauge);
+      Plotly.newPlot('gauge', dataGauge,layoutGauge,config);
     
 
     }); //Ends d3.json
@@ -259,9 +262,10 @@ function updatePlotly2(id) {
             title: "<b>Top 10 OTU</b>"
         };
         var data1 = [trace];
+        var config = {responsive:true}
 
         // Plot the bar chart using Plotly
-        Plotly.newPlot('bar', data1,layout1);
+        Plotly.newPlot('bar', data1,layout1,config);
 
         //-------------------------------------------------
         // Create a bubble chart that displays each sample.
@@ -290,6 +294,7 @@ function updatePlotly2(id) {
             autosize: true,
             showlegend: false,
             height: 500,
+            // width: 500,
             width: 900,
             margin: {
                 l: 150,
@@ -302,7 +307,8 @@ function updatePlotly2(id) {
 
         // Plot the new bubble chart using Plotly
         var data2 = [trace2];
-        Plotly.newPlot('bubble', data2,layout2)
+        var config = {responsive:true}
+        Plotly.newPlot('bubble', data2,layout2,config)
     });
 };
 
@@ -390,8 +396,8 @@ function updateDemoInfo(id) {
             }
             ],
             title: "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week",
-            height: 500,
-            width: 500,
+            // height: 500,
+            // width: 500,
             xaxis: {
             zeroline: false,
             showticklabels: false,
@@ -405,9 +411,10 @@ function updateDemoInfo(id) {
             range: [-1, 1]
             }
         };
+        var config = {responsive:true}
 
         // Plot the new gauge chart
-        Plotly.newPlot('gauge', dataGauge,layoutGauge);
+        Plotly.newPlot('gauge', dataGauge,layoutGauge,config);
 
     });
 };
