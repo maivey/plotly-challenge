@@ -98,8 +98,8 @@ function init() {
         automargin: true,
         autosize: true,
         showlegend: false,
-        height: 500,
-        width: 900,
+        // height: 500,
+        // width: 900,
             margin: {
                 l: 150,
                 r: 50,
@@ -293,9 +293,9 @@ function updatePlotly2(id) {
             automargin: true,
             autosize: true,
             showlegend: false,
-            height: 500,
+            // height: 500,
             // width: 500,
-            width: 900,
+            // width: 900,
             margin: {
                 l: 150,
                 r: 50,
